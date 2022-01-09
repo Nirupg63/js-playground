@@ -6,11 +6,15 @@ function App() {
 
   const getRandomWord = async () => {
     console.log("Getting Random Word from server")
-    const response = await fetch('http://localhost:9000/word');
-    console.log("Response ", response)
-    const body = await response.json();
-    console.log("Body: ", body)
-    setRandomWord(body.word)
+    try {
+      const response = await fetch('http://localhost:9000/word');
+      console.log("Response ", response)
+      const body = await response.json();
+      console.log("Body: ", body)
+      setRandomWord(body.word)
+    } catch (err) {
+      setRandomWord("Error Fetching data from server")
+    }   
   }
 
   return (
