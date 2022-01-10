@@ -7,7 +7,7 @@ function App() {
   const getRandomWord = async () => {
     console.log("Getting Random Word from server")
     try {
-      const response = await fetch(`http://${process.env.REACT_APP_URL}/word`);
+      const response = await fetch(`${process.env.REACT_APP_URL}/word`);
       console.log("Response ", response)
       const body = await response.json();
       console.log("Body: ", body)
