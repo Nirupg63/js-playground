@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                bat 'cd server
+                npm install                
+                '
             }
         }
         stage('Test') {
@@ -14,7 +16,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                bat '
+                cd server
+                npm start
+                '
             }
         }
     }
