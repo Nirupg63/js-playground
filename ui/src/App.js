@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   const [randomWord, setRandomWord] = useState('');
 
+  
   const getRandomWord = async () => {
     console.log("Getting Random Word from server")
     try {
