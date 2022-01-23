@@ -17,6 +17,7 @@ function App() {
       setRandomWord("Error Fetching data from server")
     }   
   }
+  
 
   return (
     <div className="App">
