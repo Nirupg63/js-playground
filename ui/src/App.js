@@ -21,6 +21,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Testing CI/CD</h1>
       <button onClick={getRandomWord}>Click to generate a word that takes 3 seconds</button>
       <h2>{randomWord}</h2>
     </div>
