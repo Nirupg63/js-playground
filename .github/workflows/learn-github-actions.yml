@@ -29,6 +29,7 @@ jobs:
 
 
   build-server:
+    needs: build-ui
 
     runs-on: self-hosted
     
